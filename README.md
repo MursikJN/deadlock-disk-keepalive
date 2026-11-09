@@ -10,7 +10,6 @@
 
 Иногда игра на долю секунды замирает, когда ей нужны данные с SSD. В одном случае проверка показала, что чтение маленького участка файла игры занимало более половины секунды. Когда диск постоянно выполнял небольшие чтения, задержки в тесте стали меньше, а во время двух матчей заметных фризов не было.
 
-Причину задержек конкретного накопителя установить не удалось. У похожих фризов бывают разные причины, поэтому этот способ может помочь не всем. Две игры без фризов ещё не доказывают, что проблема устранена навсегда.
 
 ### Как установить
 
@@ -23,7 +22,7 @@ Windows может показать предупреждение для скач
 
 ### Как это работает
 
-После входа в Windows помощник ждёт запуска Deadlock. Пока игра открыта, он примерно каждые 50 миллисекунд считывает небольшой участок её исполняемого файла с диска. При выходе из игры чтение прекращается. Помощник остаётся в ожидании следующего запуска.
+После входа в Windows помощник ждёт запуска Deadlock. Пока игра открыта, он примерно каждые 50 миллисекунд считывает небольшой участок её исполняемого файла с диска. При выходе из игры чтение прекращается.
 
 Программа сама определяет расположение запущенной игры. Нужны Windows и встроенный Windows PowerShell. Python устанавливать не требуется.
 
@@ -49,7 +48,6 @@ A small Windows helper that may reduce Deadlock stutters when they are caused by
 
 The game can briefly freeze while waiting for data from an SSD. In one investigated case, reading a small part of a game file took more than half a second. Light background reads reduced the measured delays, and the player noticed no stutters during two matches.
 
-The underlying cause of that drive's slow responses remains unknown. Similar stutters can have different causes, so this workaround will not help everyone. Two smooth matches do not prove a permanent fix.
 
 ### Installation
 
@@ -62,7 +60,7 @@ Windows may show a warning for a downloaded batch file. You can inspect the sour
 
 ### How it works
 
-After you sign in to Windows, the helper waits for Deadlock to start. While the game is open, it reads a small part of the game's executable from its drive approximately every 50 milliseconds. Reading stops when you exit the game. The helper then waits for the next launch.
+After you sign in to Windows, the helper waits for Deadlock to start. While the game is open, it reads a small part of the game's executable from its drive approximately every 50 milliseconds. Reading stops when you exit the game. 
 
 The helper finds the running game's location automatically. It requires Windows and the built-in Windows PowerShell. Python is not required.
 
